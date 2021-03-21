@@ -1,0 +1,42 @@
+<script>
+
+    var x, y;
+    var oper;
+
+   function sum(x, y) {
+        return x + y; 
+    }
+    function dif(x, y) {
+        return x - y;
+    }
+    function multi(x, y) {
+        return x * y;
+    }
+    function div(x, y) {
+        if(y !=0)
+             return x / y;
+        return 0;
+    }
+    function calculate(x, y, oper) {
+        switch (oper) {
+            case "+":
+                alert(sum(x, y));
+                break;
+            case "-":
+                alert(dif(x, y));
+                break;  
+            case "*":
+                alert(multi(x, y));
+                break;
+            case "/":
+                alert(div(x, y));
+                break; 
+            default:
+                alert("такая операция не предусмотрена");                              
+        }
+    }
+    x = +prompt ("Укажите значение первого числа");
+    y = +prompt ("Укажите значение второго числа");
+    oper = prompt ("Введите знак + , - , * , / ");
+    calculate(x, y, oper);
+</script>
