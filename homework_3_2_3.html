@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cart = [
+            {
+                title: "Velvet Cleansing Milk 200 ml",
+                size: "200 ml",
+                article: "156896",
+                quantity: 1,
+                price: 22.5
+            },
+            {
+                title: "Total Eye Lift, 15ml",
+                size: "15 ml",
+                article: "1256987",
+                quantity: 2,
+                price: 56
+            },           
+            {
+                title: "Pro-Collagen Marine Moisture Essence 100 ml",
+                size: "100 ml",
+                article: "236852",
+                quantity: 1,
+                price: 63
+            },  
+            {
+                title: "Warm-Up Massage Balm 150 ml",
+                size: "150 ml",
+                article: "555321",
+                quantity: 3,
+                price: 47
+            }
+        ];
+        function TotalCart(ShoppingCart){
+            var sum = 0;
+            for ( var item of ShoppingCart) {
+                sum += ( item.quantity * item.price )
+            }
+            return sum
+        }
+        document.write ("Сумма к оплате: " + TotalCart(cart) + " euro")
+
+    </script>
+    
+</body>
+</html>

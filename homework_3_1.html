@@ -1,0 +1,35 @@
+<script>
+    
+    var ArrayOfPrime = new Array(); // в массиве будем хранить найденные простые числа
+    
+    ArrayOfPrime[0] = 2; //Первый элемент добавляем вручную
+    
+    var ArrayCounter = 1;
+    var bFlag = false;
+    var i = 3; 
+    var j = 2; 
+    var iSquare = Math.floor(Math.sqrt(i));
+    
+    while( i <= 100 ){
+        
+        if ( i % j == 0 ){ 
+            bFlag = true; 
+        }
+        else if ( j >= iSquare ){
+            ArrayOfPrime[ArrayCounter] = i;
+            ArrayCounter++;
+            bFlag = true;
+        }
+        
+        if ( bFlag ){
+            j = 1;
+            i++;
+            iSquare = Math.floor(Math.sqrt(i));
+            bFlag = false;
+        }
+        
+        j++;
+    }
+ alert(ArrayOfPrime);
+
+</script>
